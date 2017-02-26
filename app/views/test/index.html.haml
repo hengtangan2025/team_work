@@ -1,10 +1,79 @@
-.test
-  .row
-    .col-xs-2
-      %input.form-control{type:"text",placeholder:".col-xs-2"}
-    .col-xs-3
-      %input.form-control{type:"text",placeholder:".col-xs-3"} 
-    .col-xs-4
-      %input.form-control{type:"text",placeholder:".col-xs-4"}
+.event-list
+  .button.redirect-new.btn.btn-primary{style:"margin-bottom:10px;margin-top:20px;"} 新建项目
+  .search-box
+    %form.form-inline
+      .form-group
+        %label 项目编码
+        %input.form-control{type:"text", placeholder:"例如：999"}
+      .form-group{style:"margin-left:20px;"}
+        %label 项目名称
+        %input.form-control{type:"text", placeholder:"例如：aa999"}
+      %button.btn.btn-primary{type:"submit"} 查询
+  %hr
+  .event-list-box
+    %table.table.table-hover
+      %thead
+        %tr
+          %th 操作
+          %td
+          %th PID
+          %th 项目编码
+          %th 项目名称
+          %th 项目经理
+          %th 项目状态
+          %th 项目进度
+          %th 计划开始于
+          %th 计划完成于
+          %th 项目类别
+          %th 项目模式
+          %th 执行部门
+          %th 项目主管
+          %th 项目助理
+          %th 创建人
+          %th 创建日期
+      %tbody
+        -@num_ary.each do |n|
+          %tr
+            %td
+              %a{title:"管理此项目",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+                %i.glyphicon.glyphicon-edit
+              %a{title:"导出",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+                %i.glyphicon.glyphicon-export
+              %a{title:"启动项目",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+                %i.glyphicon.glyphicon-play
+              %a{title:"删除该项目",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+                %i.glyphicon.glyphicon-trash
+            %td
+              %input{type:"checkbox"}
+            %td 2345
+            %td 6657
+            %td 
+              %a{href:"javascript:;",style:'text-decoration:none;color:#60CCEF;', data:{:toggle => "modal", :target =>"#modal-dialog"}}
+                %span{style:"font-family:Microsoft YaHei;"} 测试项目6657
+            %td Mark
+            %td 进行中
+            %td 
+              .progress
+                .progress-bar.progress-bar-info{role:"progress", style:"color:black;width:#{n}%;"}
+                  #{n}%
+            %td 2016-02-24
+            %td 2017-02-24
+            %td -
+            %td 资源项目
+            %td -
+            %td Mondor
+            %td John
+            %td Alan
+            %td 2016-02-20
+.modal.fade{:id => "modal-dialog", :tabindex =>"-1", :role => "dialog", :aria => {:labelledby => "modalLabel"}}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header{style:"background-color:#2B84DD;"}
+        %button.close{type: "button", data:{dismiss: "modal", global: "false" , aria: {label: "Close"}}}
+          %i.glyphicon.glyphicon-remove
+        %h4.modal-title{style:"color:white;font-family:Microsoft YaHei;font-size:18px;font-weight: bold;"} 查看项目属性
+      .modal-body
+        %span Hello World !
+      .modal-footer
+        %button.btn.btn-default.close-modal{:type => "button", data:{dismiss: "modal", global: "false"}}关闭
 
-  .button.btn.btn-primary （首选项）Primary
