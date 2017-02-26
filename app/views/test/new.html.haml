@@ -1,16 +1,11 @@
 .new-event
-  .base-info
-    %a.btn.btn-primary{href:"/test"} 返回
-    %span
-      %i.glyphicon.glyphicon-exclamation-sign 
-      基本信息
+  %a.btn.btn-primary{href:"/test", style: "margin-top: 10px;margin-bottom: 20px;"} 返回
   .team
-    .row
-      .col-xs-2
-        %input.form-control{type:"text",placeholder:".col-xs-2"}
-      .col-xs-3
-        %input.form-control{type:"text",placeholder:".col-xs-3"} 
-      .col-xs-4
-        %input.form-control{type:"text",placeholder:".col-xs-4"}
-
-    .button.btn.btn-primary （首选项）Primary
+    %label
+      %i.glyphicon.glyphicon-list-alt
+      新建项目
+    %hr
+    .base-info
+      %span
+        %i.glyphicon.glyphicon-exclamation-sign 
+        基本信息
