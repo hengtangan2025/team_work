@@ -1,0 +1,51 @@
+.a= "填报人：员工1 工作时间：20/02/2017 26/02/2017"
+%button= "新增"
+%button= "保存"
+%button= "提交"
+%table
+  %thead
+    %th.operations= "操作"
+    %th.operations= "所属项目"
+    %th.operations= "所属任务"
+    %th.date= "星期一"
+    %th.date= "星期二"
+    %th.date= "星期三"
+    %th.date= "星期四"
+    %th.date= "星期五"
+    %th.date= "星期六"
+    %th.date= "星期日"
+    %th.total= "总计"
+
+  %tr.working-hours-input
+    %th.operations= "操作"
+    %th
+      %select.select-project
+        %option= ""
+        %option= "项目1"
+        %option= "项目2"
+        %option= "项目3"
+        %option= "项目4" 
+    %th
+      %select.select-task
+        %option= ""
+        %option= "任务1"
+        %option= "任务2"
+        %option= "任务3"
+        %option= "任务4"
+    %th
+      %input.monday
+    %th
+      %input.monday
+    %th
+      %input.monday
+    %th
+      %input.monday
+    %th
+      %input.monday
+    %th
+      %input.monday
+    %th
+      %input.monday
+    %th.total= "总计"
+
+ 
