@@ -6,4 +6,12 @@ class TestController < ApplicationController
   def working_hours_submit
     
   end
+
+  def working_hours_approval
+    
+  end
+
+  def working_hours_approval_history
+    
+  end
 end
